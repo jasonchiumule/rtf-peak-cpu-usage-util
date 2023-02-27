@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "ea2d9e14-7beb-48f4-b495-3e477ac4d92a",
+		"name": "DCJ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/api/consumption/10de877f-5cd3-4390-8f91-dcc2949ab71b",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "mediaType",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/api/consumption/10de877f-5cd3-4390-8f91-dcc2949ab71b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"consumption",
+						"10de877f-5cd3-4390-8f91-dcc2949ab71b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://anypoint.mulesoft.com/monitoring/api/visualizer/api/datasources/proxy/5841/query?db=%22dias_mule_prod%22&q=SELECT%20mean(%22cpu%22)%20FROM%20%22jvm.cpu.operatingsystem%22%20WHERE%20(%22org_id%22%20%3D%20%2710de877f-5cd3-4390-8f91-dcc2949ab71b%27%20AND%20%22env_id%22%20%3D%20%27e1f2cecb-1cb1-4648-bf34-1ccca2b24e74%27%20AND%20%22app_id%22%20%3D%20%27fb-ecommerce-cloud%27)%20AND%20time%20%3E%3D%20now()%20-%2030m%20GROUP%20BY%20time(1m)%2C%20%22worker_id%22%20fill(null)%20tz(%27Australia%2FSydney%27)&epoch=ms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ffa84728-870a-496e-87a9-d6d7ef29f062",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"results\":[{\"statement_id\":0,\"series\":[{\"name\":\"jvm.cpu.operatingsystem\",\"tags\":{\"worker_id\":\"fb-ecommerce-cloud-6f65cf568b-d762b\"},\"columns\":[\"time\",\"mean\"],\"values\":[[1677213660000,null],[1677213720000,0.043689320388349516],[1677213780000,0.04476190476190476],[1677213840000,0.0446927374301676],[1677213900000,0.045372050816696916],[1677213960000,0.045207956600361664],[1677214020000,0.045053003533568906],[1677214080000,0.04607508532423208],[1677214140000,0.05],[1677214200000,0.05],[1677214260000,0.03333333333333333],[1677214320000,0.0375],[1677214380000,0.05],[1677214440000,0.0423728813559322],[1677214500000,0.04285714285714286],[1677214560000,0.05128205128205128],[1677214620000,0.05232558139534884],[1677214680000,0.045],[1677214740000,0.045871559633027525],[1677214800000,0.046218487394957986],[1677214860000,0.046875],[1677214920000,0.04642857142857143],[1677214980000,0.0472972972972973],[1677215040000,0.04716981132075472],[1677215100000,0.04790419161676647],[1677215160000,0.0446927374301676],[1677215220000,0.0456989247311828],[1677215280000,0.04314720812182741],[1677215340000,0.045454545454545456],[1677215400000,null],[1677215460000,null]]}]}]}\n"
+				},
+				"url": {
+					"raw": "https://anypoint.mulesoft.com/monitoring/api/visualizer/api/datasources/proxy/5841/query?db=%22dias_mule_prod%22&q=SELECT%20mean(%22cpu%22)%20FROM%20%22jvm.cpu.operatingsystem%22%20WHERE%20(%22org_id%22%20%3D%20%2710de877f-5cd3-4390-8f91-dcc2949ab71b%27%20AND%20%22env_id%22%20%3D%20%27e1f2cecb-1cb1-4648-bf34-1ccca2b24e74%27%20AND%20%22app_id%22%20%3D%20%27fb-ecommerce-cloud%27)%20AND%20time%20%3E%3D%20now()%20-%2030m%20GROUP%20BY%20time(1m)%2C%20%22worker_id%22%20fill(null)%20tz(%27Australia%2FSydney%27)&epoch=ms",
+					"protocol": "https",
+					"host": [
+						"anypoint",
+						"mulesoft",
+						"com"
+					],
+					"path": [
+						"monitoring",
+						"api",
+						"visualizer",
+						"api",
+						"datasources",
+						"proxy",
+						"5841",
+						"query"
+					],
+					"query": [
+						{
+							"key": "db",
+							"value": "%22dias_mule_prod%22"
+						},
+						{
+							"key": "q",
+							"value": "SELECT%20mean(%22cpu%22)%20FROM%20%22jvm.cpu.operatingsystem%22%20WHERE%20(%22org_id%22%20%3D%20%2710de877f-5cd3-4390-8f91-dcc2949ab71b%27%20AND%20%22env_id%22%20%3D%20%27e1f2cecb-1cb1-4648-bf34-1ccca2b24e74%27%20AND%20%22app_id%22%20%3D%20%27fb-ecommerce-cloud%27)%20AND%20time%20%3E%3D%20now()%20-%2030m%20GROUP%20BY%20time(1m)%2C%20%22worker_id%22%20fill(null)%20tz(%27Australia%2FSydney%27)"
+						},
+						{
+							"key": "epoch",
+							"value": "ms"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
